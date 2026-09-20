@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-main-100: #012a4a;
+  --color-main-200: #013a63;
+  --color-main-300: #01497c;
+  --color-main-400: #014f86;
+  --color-main-500: #2a6f97;
+  --color-main-600: #2c7da0;
+  --color-main-700: #468faf;
+  --color-main-800: #61a5c2;
+  --color-main-900: #89c2d9;
+  --color-main-1000: #a9d6e5;
+  --font-persianNumber: 'vazir-digits';
+
+
+}
+
+@font-face {
+  font-family: "vazir";
+  src: url("../public/main-fonts/vazir-font-v16.1.0/Vazir-Bold.woff2") format("woff2"),
+       url("../public/main-fonts/vazir-font-v16.1.0/Vazir-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "vazir-digits";
+  src: url("../public/main-fonts/vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-FD-WOL.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'vazir';
+}
