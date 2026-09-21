@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { HeartIcon, EyeIcon } from '@heroicons/react/24/outline';
 import { HeartIcon as HeartSolid } from '@heroicons/react/24/solid';
+import Link from 'next/link';
 
 export default function ProductCard({ product }) {
   const [liked, setLiked] = useState(false);
@@ -13,8 +14,6 @@ export default function ProductCard({ product }) {
   const { title, price, image } = product;
 
   const handleLike = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
     setLiked(!liked);
   };
 
@@ -70,12 +69,8 @@ export default function ProductCard({ product }) {
         </p>
 
         {/* 👁 مشاهده Button */}
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            // TODO: navigate to product page
-          }}
+        <Link 
+          href={'/products'}
           className="group/btn relative w-full flex items-center justify-center gap-1.5 px-3 py-2 bg-gradient-to-l from-main-100 to-main-400 text-white text-xs font-bold rounded-lg shadow-md shadow-main-400/25 hover:shadow-lg hover:shadow-main-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 ease-out cursor-pointer overflow-hidden"
         >
           <span className="relative z-10 flex items-center justify-center gap-1.5">
@@ -83,7 +78,7 @@ export default function ProductCard({ product }) {
             مشاهده
           </span>
           <div className="absolute inset-0 bg-gradient-to-l from-main-300 to-main-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
-        </button>
+        </Link>
       </div>
 
       {/* Colored inner ring on hover */}

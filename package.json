@@ -1,5 +1,5 @@
 {
-  "name": "valvet-main",
+  "name": "velvet-main",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,6 +14,7 @@
     "postcss": "^8.5.28",
     "react": "19.2.8",
     "react-dom": "19.2.8",
+    "swiper": "^14.2.0",
     "tailwindcss": "^4.3.3"
   }
 }
